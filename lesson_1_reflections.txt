@@ -1,0 +1,41 @@
+I was  looking through the fc and diff results and found that,
+the spacr was mispelled in the condition which caused the bug.
+
+Now if I have different versions of the file,
+then I can see what changes I have done since previous ones,
+this can help me in figuring out how has the new file introduced any
+defect or how is hte decelopment proceeding overall.
+
+If I can manually edit commits then it is beneficial for me as
+I know what changes are important and need to go in togather.
+If I do automatic saves then I may end up with too few
+or too many versions saved.
+
+I think git allows multiple file commits as it is made for progammers in general
+so that the related features in the files can be stashed togather.
+
+Now with the git commands I can see the log; git log and see the differences in files; git diff <commit id 1> <commit id 2>.
+both these commands are quite helpful in finding the change status I am looking for.
+
+With revision control I can checkout any version of the project and find out the bug introduced and fix it by taking the diff of
+the different commit ids just after the id with bug. This is very helpful as I do not have to go through the whole code again 
+and see just the changes I made so that I can find exactly what lines could have introduced the bug.
+
+I will use git for updating my web projects so that in the next company I have to work for can see my work over there directly.
+Also I want to see what projects others are working on and maybe learn something from them.
+
+Our current directory is the working directory and the staging area is where our files are added to be pushed to the remote repository.
+
+To make sure that I have One logical change per commit I need to make sure that if the changes I made are very cohesive then should
+be commited togather.
+
+I think branched would be more useful for creating say levels of a game or even the language versions,
+i.e the feature is changing but the core of the project remains same.
+
+When seeing the branch structure I figured that all commits have a parent and if they do not fall on a path from any branch's head
+then they will not be reachable and these branches is very nice way to creatae a feature of your own without disturbing the overall project.
+
+when I merge the two branches, I get a new node pointing to both the branches so that when I do a git log, I get a timestamped list of commits in both the branches
+but sometimes I see merge conflict then I can see the changes inside and merge properly and then do a merge conflict, this all helps in say adding your bug fixes to the new feature you were implementing.
+
+The automatic merging of the files are good feature of git, I think sometime they can create a problem if say I added a function to be called after the user withdraws money, and say another developer added another function to do the similar logic, but if we had our code in different sections then they can pass without confllict but would be a wrong thing, on the other hand if we do all merges manually then a lot of time will be taken for this, so if the developers have a regular discussion on what features they have added to their branches then we can have the automatic git merge. Othewise it is a good choise to go for manual merge.
